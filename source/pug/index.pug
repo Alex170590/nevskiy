@@ -1,0 +1,60 @@
+//include mixin/index
+doctype html
+html(lang="ru")
+    head
+        meta(charset="utf-8")
+        meta(name='viewport' content='width=device-width, initial-scale=1.0')
+        title Главная страница
+    body
+        section.header
+            div.wrapper.header__wrapper
+                div.wrap.header__wrap
+                    div.header__logo
+                        a(href='/')
+                            img(src=require('../img/logo.jpg').default alt='')
+                    div.header__info
+                        div.header__phone
+                            div Звоните прямо сейчас!
+                            a(href='tel:+7 812  561-18-91') +7 812  561-18-91
+                        div.header__btn
+                            a(href='/').header__btnA Заказать звонок
+        section.banner
+            div.wrapper.banner__wrapper
+                div.wrap.banner__wrap
+                    div.banner__map
+                        include ../img/map.svg
+                    div.banner__men
+                        div.banner__menImg
+                        div.banner__menInfo
+                            span Бесплатно!
+                            span Вызвать мастера
+                    div.banner__info
+                        div.banner__title
+                            h1 ремонт окон
+                        div.banner__desc
+                            span Наши мастера —
+                            br
+                            span.banner__descYellow в каждом районе
+                                br
+                                | Санкт-Питербурга!
+                        div.banner__flag
+                            span ВЫГОДНОЕ ПРЕДЛОЖЕНИЕ
+                        div.banner__list
+                            div.banner__item.banner__item--1
+                                span Стоимость <br> от 499 руб!
+                            div.banner__item.banner__item--2
+                                span Диагностика <br> и бесплатно!
+                            div.banner__item.banner__item--3
+                                span Ремонт в день <br> обращения!
+                        div.banner__form
+                            form(action='' method='post').banner__formAction
+                                div.banner__formFilds
+                                    input(name='name' type='text' placeholder='Имя')
+                                div.banner__formFilds
+                                    input(name='phone' type='text' placeholder='Телефон')
+                                div.banner__formFilds
+                                    button(type='submit') Получит консультацию
+                        div.banner__mobile
+                            a(href='/').banner__mobileBtn
+
+
